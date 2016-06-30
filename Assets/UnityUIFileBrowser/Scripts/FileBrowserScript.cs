@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿// Author: Salvis Poišs (poisins92@gmail.com)
+// Feel free to use and modify (and leave some credits :) )!
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -6,6 +9,9 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 
+/// <summary>
+/// Main FileBrowser script
+/// </summary>
 [DisallowMultipleComponent]
 public class FileBrowserScript : MonoBehaviour
 {
@@ -176,17 +182,28 @@ public class FileBrowserScript : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// Open file browser window. Doesn't return seleted file path
+    /// </summary>
     public void OpenFileBrowser()
     {
         gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// Open file browser window with option to return selected file path
+    /// </summary>
+    /// <param name="returnMessage">MonoBehavior to process returned file path. Specify <c>this.SelectEventName</c> first!</param>
     public void OpenFileBrowser(MonoBehaviour returnMessage)
     {
         OpenFileBrowser();
         returnScript = returnMessage;
     }
 
+    /// <summary>
+    /// Return selected file path if widow opened with <c>OpenFileBrowser(MonoBehavior)</c>
+    /// and close browser window
+    /// </summary>
     public void OpenFileButtonClick()
     {
         if (OpenFilePath != string.Empty)

@@ -1,8 +1,14 @@
-﻿using UnityEngine;
+﻿// Author: Salvis Poišs (poisins92@gmail.com)
+// Feel free to use and modify (and leave some credits :) )!
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using System.IO;
 
+/// <summary>
+/// Describes items in file browser
+/// </summary>
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Button))]
 public class DiskContentItemScript : MonoBehaviour {

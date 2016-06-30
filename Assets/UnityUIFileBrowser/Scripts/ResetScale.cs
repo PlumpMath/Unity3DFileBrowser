@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿// Author: Salvis Poišs (poisins92@gmail.com)
+// Feel free to use and modify (and leave some credits :) )!
+
+using UnityEngine;
 using System.Collections;
 
 using UnityEngine.UI;
