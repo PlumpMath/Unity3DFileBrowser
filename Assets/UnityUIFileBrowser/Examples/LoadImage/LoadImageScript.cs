@@ -2,9 +2,9 @@
 // Feel free to use and modify (and leave some credits :) )!
 
 using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 using System.IO;
+using poisins;
 
 /// <summary>
 /// Example - show image selected with file browser
@@ -12,18 +12,15 @@ using System.IO;
 [DisallowMultipleComponent]
 public class LoadImageScript : MonoBehaviour
 {
-    public Image imageField;
 
-    [SerializeField]
-    private FileBrowserScript browserScript;
+    public Image imageField;
 
     /// <summary>
     /// Open file browser and pass this script as return MonoBehavior
     /// </summary>
-    public void OpenBrowser()
+    public void OnClickOpenBrowser()
     {
-        browserScript.SelectEventName = "LoadImage"; //Same as bellow (image loading method)
-        browserScript.OpenFileBrowser(this);
+        FileBrowser.OpenFileBrowser(LoadImage);
     }
 
     /// <summary>
